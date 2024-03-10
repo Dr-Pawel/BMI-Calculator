@@ -1,0 +1,10 @@
+C:\Paweł_Praca\Repositories\BMI Calculator\BMI_Calculator\bin\Debug\BMI_Calculator.exe.config
+C:\Paweł_Praca\Repositories\BMI Calculator\BMI_Calculator\bin\Debug\BMI_Calculator.exe
+C:\Paweł_Praca\Repositories\BMI Calculator\BMI_Calculator\bin\Debug\BMI_Calculator.pdb
+C:\Paweł_Praca\Repositories\BMI Calculator\BMI_Calculator\obj\Debug\BMI_Calculator.csproj.AssemblyReference.cache
+C:\Paweł_Praca\Repositories\BMI Calculator\BMI_Calculator\obj\Debug\BMI_Calculator.Form1.resources
+C:\Paweł_Praca\Repositories\BMI Calculator\BMI_Calculator\obj\Debug\BMI_Calculator.Properties.Resources.resources
+C:\Paweł_Praca\Repositories\BMI Calculator\BMI_Calculator\obj\Debug\BMI_Calculator.csproj.GenerateResource.cache
+C:\Paweł_Praca\Repositories\BMI Calculator\BMI_Calculator\obj\Debug\BMI_Calculator.csproj.CoreCompileInputs.cache
+C:\Paweł_Praca\Repositories\BMI Calculator\BMI_Calculator\obj\Debug\BMI_Calculator.exe
+C:\Paweł_Praca\Repositories\BMI Calculator\BMI_Calculator\obj\Debug\BMI_Calculator.pdb
