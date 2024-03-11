@@ -37,16 +37,17 @@ namespace BMI_Calculator
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.bmiValue = new System.Windows.Forms.NumericUpDown();
+            this.bmiResult = new System.Windows.Forms.Label();
+            this.resultsLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.weightValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heightValue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bmiValue)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(45, 99);
+            this.label2.Location = new System.Drawing.Point(44, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 40);
             this.label2.TabIndex = 1;
@@ -56,7 +57,7 @@ namespace BMI_Calculator
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(45, 171);
+            this.label1.Location = new System.Drawing.Point(44, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 40);
             this.label1.TabIndex = 2;
@@ -66,7 +67,7 @@ namespace BMI_Calculator
             // weightValue
             // 
             this.weightValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.weightValue.Location = new System.Drawing.Point(278, 107);
+            this.weightValue.Location = new System.Drawing.Point(277, 79);
             this.weightValue.Maximum = new decimal(new int[] {
             999,
             0,
@@ -80,7 +81,7 @@ namespace BMI_Calculator
             // heightValue
             // 
             this.heightValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.heightValue.Location = new System.Drawing.Point(278, 179);
+            this.heightValue.Location = new System.Drawing.Point(277, 151);
             this.heightValue.Maximum = new decimal(new int[] {
             999,
             0,
@@ -95,12 +96,13 @@ namespace BMI_Calculator
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(50, 241);
+            this.button1.Location = new System.Drawing.Point(49, 213);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(385, 27);
             this.button1.TabIndex = 2;
             this.button1.Text = "Calculate";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -125,28 +127,52 @@ namespace BMI_Calculator
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(45, 305);
+            this.label5.Location = new System.Drawing.Point(44, 257);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(157, 40);
             this.label5.TabIndex = 8;
             this.label5.Text = "BMI";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bmiValue
+            // bmiResult
             // 
-            this.bmiValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.bmiValue.Location = new System.Drawing.Point(278, 313);
-            this.bmiValue.Name = "bmiValue";
-            this.bmiValue.ReadOnly = true;
-            this.bmiValue.Size = new System.Drawing.Size(157, 29);
-            this.bmiValue.TabIndex = 9;
+            this.bmiResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bmiResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bmiResult.Location = new System.Drawing.Point(272, 257);
+            this.bmiResult.Name = "bmiResult";
+            this.bmiResult.Size = new System.Drawing.Size(157, 40);
+            this.bmiResult.TabIndex = 9;
+            this.bmiResult.Text = "Height (cm)";
+            this.bmiResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // resultsLabel
+            // 
+            this.resultsLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.resultsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.resultsLabel.Location = new System.Drawing.Point(49, 335);
+            this.resultsLabel.Name = "resultsLabel";
+            this.resultsLabel.Size = new System.Drawing.Size(385, 104);
+            this.resultsLabel.TabIndex = 10;
+            this.resultsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(163, 308);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(157, 27);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "result";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
-            this.Controls.Add(this.bmiValue);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.resultsLabel);
+            this.Controls.Add(this.bmiResult);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -159,7 +185,6 @@ namespace BMI_Calculator
             this.Text = "BMI Calculator";
             ((System.ComponentModel.ISupportInitialize)(this.weightValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heightValue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bmiValue)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,7 +199,9 @@ namespace BMI_Calculator
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown bmiValue;
+        private System.Windows.Forms.Label bmiResult;
+        private System.Windows.Forms.Label resultsLabel;
+        private System.Windows.Forms.Label label6;
     }
 }
 
