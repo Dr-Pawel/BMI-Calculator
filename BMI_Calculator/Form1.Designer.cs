@@ -142,7 +142,6 @@ namespace BMI_Calculator
             this.bmiResult.Name = "bmiResult";
             this.bmiResult.Size = new System.Drawing.Size(157, 40);
             this.bmiResult.TabIndex = 9;
-            this.bmiResult.Text = "Height (cm)";
             this.bmiResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // resultsLabel
