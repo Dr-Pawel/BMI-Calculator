@@ -1,4 +1,4 @@
-# Heading BMI Calculator
+#Heading BMI Calculator
 This is a simple Body Mass Index (BMI) Calculator built using C# and Windows Forms.   
 The application allows users to enter their weight (kg) and height (cm),   
 then calculates and displays their BMI along with a basic health classification (e.g., Underweight, Normal, Overweight).  
